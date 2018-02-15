@@ -1,0 +1,59 @@
+<?php
+// module/Galerie/view/galerie/galerie/edit.phtml:
+
+$title = 'Edit galerie';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<?php
+
+$autor = $form->get('autor');
+$autor->setAttribute('class', 'form-control');
+$autor->setAttribute('placeholder', 'Autor');
+
+$galerie = $form->get('title');
+$galerie->setAttribute('class', 'form-control');
+$galerie->setAttribute('placeholder', 'Galerie  title');
+
+
+
+$land = $form->get('land');
+$land->setAttribute('class', 'form-control');
+$land->setAttribute('placeholder', 'Land');
+
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary');
+
+$form->setAttribute('action', $this->url('galerie', [
+    'action' => 'edit',
+    'id'     => $id,
+]));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+<div class="form-group">
+    <?= $this->formLabel($galerie) ?>
+    <?= $this->formElement($galerie) ?>
+    <?= $this->formElementErrors()->render($galerie, ['class' => 'help-block']) ?>
+</div>
+
+<div class="form-group">
+    <?= $this->formLabel($autor) ?>
+    <?= $this->formElement($autor) ?>
+    <?= $this->formElementErrors()->render($autor, ['class' => 'help-block']) ?>
+</div>
+
+<div class="form-group">
+    <?= $this->formLabel($land) ?>
+    <?= $this->formElement($land) ?>
+    <?= $this->formElementErrors()->render($land, ['class' => 'help-block']) ?>
+</div>
+
+
+
+
+<?php
+echo $this->formSubmit($submit);
+echo $this->formHidden($form->get('id'));
+echo $this->form()->closeTag();

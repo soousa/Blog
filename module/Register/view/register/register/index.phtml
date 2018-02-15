@@ -1,0 +1,45 @@
+<?php
+// module/Register/view/register/register/index.phtml:
+
+$title = 'My Registers';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<p>
+    <a href="<?= $this->url('register', ['action' => 'add']) ?>">Add new register</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+	<th>Email</th>
+	<th>Password</th>
+	
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($this->paginator as $register) : // <-- change here! ?>
+    <tr>
+        <td><?= $this->escapeHtml($register->firstname) ?></td>
+        <td><?= $this->escapeHtml($register->lastname) ?></td>
+		<td><?= $this->escapeHtml($register->email) ?></td>
+		<td><?= $this->escapeHtml($register->password) ?></td>
+        <td>
+            <a href="<?= $this->url('register', ['action' => 'edit', 'id' => $register->id]) ?>">Edit</a>
+            <a href="<?= $this->url('register', ['action' => 'delete', 'id' => $register->id]) ?>">Delete</a>
+        </td>
+    </tr>
+<?php endforeach; ?>
+</table>
+<?= $this->paginationControl(
+    // The paginator object:
+    $this->paginator,
+    // The scrolling style:
+    'sliding',
+    // The partial to use to render the control:
+    'partial/paginator',
+    // The route to link to when a user clicks a control link:
+    ['route' => 'register']
+) ?>
+
+

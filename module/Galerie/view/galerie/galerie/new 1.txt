@@ -1,0 +1,471 @@
+Microsoft Windows [Version 10.0.16299.15]
+(c) 2017 Microsoft Corporation. Alle Rechte vorbehalten.
+
+C:\WINDOWS\system32>cd..
+
+C:\Windows>cd..
+
+C:\>cd devhost
+
+C:\devhost>git clone https://github.com/zendframework/ZendSkeletonApplication
+Cloning into 'ZendSkeletonApplication'...
+remote: Counting objects: 3736, done.
+remote: Total 3736 (delta 0), reused 0 (delta 0), pack-reused 3736
+Receiving objects: 100% (3736/3736), 2.60 MiB | 2.58 MiB/s, done.
+Resolving deltas: 100% (1771/1771), done.
+
+C:\devhost>dir
+ Datenträger in Laufwerk C: ist OSDisk
+ Volumeseriennummer: E69F-29DD
+
+ Verzeichnis von C:\devhost
+
+16.01.2018  09:11    <DIR>          .
+16.01.2018  09:11    <DIR>          ..
+15.01.2018  10:36    <DIR>          skeleton
+15.01.2018  14:34    <DIR>          vote-my-pizza
+16.01.2018  09:11    <DIR>          ZendSkeletonApplication
+               0 Datei(en),              0 Bytes
+               5 Verzeichnis(se), 937.666.539.520 Bytes frei
+
+C:\devhost>cd ZendSkelettonApplication
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\devhost>cd zendskeletonapplication
+
+C:\devhost\ZendSkeletonApplication>dir
+ Datenträger in Laufwerk C: ist OSDisk
+ Volumeseriennummer: E69F-29DD
+
+ Verzeichnis von C:\devhost\ZendSkeletonApplication
+
+16.01.2018  09:11    <DIR>          .
+16.01.2018  09:11    <DIR>          ..
+16.01.2018  09:11               100 .gitignore
+16.01.2018  09:11             4.648 composer.json
+16.01.2018  09:11            40.747 composer.lock
+16.01.2018  09:11             2.421 CONDUCT.md
+16.01.2018  09:11    <DIR>          config
+16.01.2018  09:11             7.098 CONTRIBUTING.md
+16.01.2018  09:11    <DIR>          data
+16.01.2018  09:11                98 docker-compose.yml
+16.01.2018  09:11               410 Dockerfile
+16.01.2018  09:11             1.545 LICENSE.md
+16.01.2018  09:11    <DIR>          module
+16.01.2018  09:11             1.029 phpcs.xml
+16.01.2018  09:11               261 phpunit.xml.dist
+16.01.2018  09:11    <DIR>          public
+16.01.2018  09:11             6.749 README.md
+16.01.2018  09:11               516 TODO.md
+16.01.2018  09:11             1.884 Vagrantfile
+              13 Datei(en),         67.506 Bytes
+               6 Verzeichnis(se), 937.666.539.520 Bytes frei
+
+C:\devhost\ZendSkeletonApplication>composer install
+Cannot load Xdebug - extension already loaded
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Package operations: 18 installs, 0 updates, 0 removals
+  - Installing zendframework/zend-component-installer (0.7.0): Loading from cache
+  - Installing zendframework/zend-skeleton-installer (0.1.4): Loading from cache
+  - Installing zendframework/zend-stdlib (3.1.0): Loading from cache
+  - Installing zendframework/zend-config (2.6.0): Loading from cache
+  - Installing zendframework/zend-loader (2.5.1): Loading from cache
+  - Installing zendframework/zend-eventmanager (3.1.0): Loading from cache
+  - Installing zendframework/zend-view (2.8.1): Loading from cache
+  - Installing psr/container (1.0.0): Loading from cache
+  - Installing container-interop/container-interop (1.2.0): Loading from cache
+  - Installing zendframework/zend-servicemanager (3.3.0): Loading from cache
+  - Installing zendframework/zend-validator (2.8.2): Loading from cache
+  - Installing zendframework/zend-escaper (2.5.2): Loading from cache
+  - Installing zendframework/zend-uri (2.5.2): Loading from cache
+  - Installing zendframework/zend-http (2.6.0): Loading from cache
+  - Installing zendframework/zend-router (3.0.2): Loading from cache
+  - Installing zendframework/zend-modulemanager (2.7.2): Loading from cache
+  - Installing zendframework/zend-mvc (3.0.4): Loading from cache
+  - Installing zfcampus/zf-development-mode (3.1.0): Loading from cache
+zendframework/zend-config suggests installing zendframework/zend-filter (Zend\Filter component)
+zendframework/zend-config suggests installing zendframework/zend-i18n (Zend\I18n component)
+zendframework/zend-config suggests installing zendframework/zend-json (Zend\Json to use the Json reader or writer classes)
+zendframework/zend-view suggests installing zendframework/zend-authentication (Zend\Authentication component)
+zendframework/zend-view suggests installing zendframework/zend-feed (Zend\Feed component)
+zendframework/zend-view suggests installing zendframework/zend-filter (Zend\Filter component)
+zendframework/zend-view suggests installing zendframework/zend-i18n (Zend\I18n component)
+zendframework/zend-view suggests installing zendframework/zend-json (Zend\Json component)
+zendframework/zend-view suggests installing zendframework/zend-navigation (Zend\Navigation component)
+zendframework/zend-view suggests installing zendframework/zend-paginator (Zend\Paginator component)
+zendframework/zend-view suggests installing zendframework/zend-permissions-acl (Zend\Permissions\Acl component)
+zendframework/zend-servicemanager suggests installing ocramius/proxy-manager (ProxyManager 1.* to handle lazy initialization of services)
+zendframework/zend-validator suggests installing zendframework/zend-db (Zend\Db component)
+zendframework/zend-validator suggests installing zendframework/zend-filter (Zend\Filter component, required by the Digits validator)
+zendframework/zend-validator suggests installing zendframework/zend-i18n (Zend\I18n component to allow translation of validation error messages as well as to use the various Date validators)
+zendframework/zend-validator suggests installing zendframework/zend-i18n-resources (Translations of validator messages)
+zendframework/zend-validator suggests installing zendframework/zend-math (Zend\Math component)
+zendframework/zend-validator suggests installing zendframework/zend-session (Zend\Session component)
+zendframework/zend-router suggests installing zendframework/zend-i18n (^2.6, if defining translatable HTTP path segments)
+zendframework/zend-modulemanager suggests installing zendframework/zend-console (Zend\Console component)
+zendframework/zend-mvc suggests installing zendframework/zend-json ((^2.6.1 || ^3.0) To auto-deserialize JSON body content in AbstractRestfulController extensions, when json_decode is unavailable)
+zendframework/zend-mvc suggests installing zendframework/zend-mvc-console (zend-mvc-console provides the ability to expose zend-mvc as a console application)
+zendframework/zend-mvc suggests installing zendframework/zend-mvc-i18n (zend-mvc-i18n provides integration with zend-i18n, including a translation bridge and translatable route segments)
+zendframework/zend-mvc suggests installing zendframework/zend-mvc-plugin-fileprg (To provide Post/Redirect/Get functionality around forms that container file uploads)
+zendframework/zend-mvc suggests installing zendframework/zend-mvc-plugin-flashmessenger (To provide flash messaging capabilities between requests)
+zendframework/zend-mvc suggests installing zendframework/zend-mvc-plugin-identity (To access the authenticated identity (per zend-authentication) in controllers)
+zendframework/zend-mvc suggests installing zendframework/zend-mvc-plugin-prg (To provide Post/Redirect/Get functionality within controllers)
+zendframework/zend-mvc suggests installing zendframework/zend-psr7bridge ((^0.2) To consume PSR-7 middleware within the MVC workflow)
+zendframework/zend-mvc suggests installing zendframework/zend-servicemanager-di (zend-servicemanager-di provides utilities for integrating zend-di and zend-servicemanager in your zend-mvc application)
+Generating autoload files
+
+    Do you want a minimal install (no optional packages)? Y/n
+y
+    Removing optional packages from composer.json
+    Updating composer.json
+  - Removing zendframework/zend-skeleton-installer (0.1.4)
+Removing zendframework/zend-skeleton-installer...
+    Removed plugin zendframework/zend-skeleton-installer.
+    Removing from composer.json
+    Complete!
+
+C:\devhost\ZendSkeletonApplication>dir
+ Datenträger in Laufwerk C: ist OSDisk
+ Volumeseriennummer: E69F-29DD
+
+ Verzeichnis von C:\devhost\ZendSkeletonApplication
+
+16.01.2018  09:14    <DIR>          .
+16.01.2018  09:14    <DIR>          ..
+16.01.2018  09:11               100 .gitignore
+16.01.2018  09:16             1.282 composer.json
+16.01.2018  09:16            37.920 composer.lock
+16.01.2018  09:11             2.421 CONDUCT.md
+16.01.2018  09:11    <DIR>          config
+16.01.2018  09:11             7.098 CONTRIBUTING.md
+16.01.2018  09:11    <DIR>          data
+16.01.2018  09:11                98 docker-compose.yml
+16.01.2018  09:11               410 Dockerfile
+16.01.2018  09:11             1.545 LICENSE.md
+16.01.2018  09:11    <DIR>          module
+16.01.2018  09:11             1.029 phpcs.xml
+16.01.2018  09:11               261 phpunit.xml.dist
+16.01.2018  09:11    <DIR>          public
+16.01.2018  09:11             6.749 README.md
+16.01.2018  09:11               516 TODO.md
+16.01.2018  09:11             1.884 Vagrantfile
+16.01.2018  09:15    <DIR>          vendor
+              13 Datei(en),         61.313 Bytes
+               7 Verzeichnis(se), 937.657.921.536 Bytes frei
+
+C:\devhost\ZendSkeletonApplication>dir vendor
+ Datenträger in Laufwerk C: ist OSDisk
+ Volumeseriennummer: E69F-29DD
+
+ Verzeichnis von C:\devhost\ZendSkeletonApplication\vendor
+
+16.01.2018  09:15    <DIR>          .
+16.01.2018  09:15    <DIR>          ..
+16.01.2018  09:15               178 autoload.php
+16.01.2018  09:15    <DIR>          bin
+16.01.2018  09:15    <DIR>          composer
+16.01.2018  09:14    <DIR>          container-interop
+16.01.2018  09:14    <DIR>          psr
+16.01.2018  09:16    <DIR>          zendframework
+16.01.2018  09:15    <DIR>          zfcampus
+               1 Datei(en),            178 Bytes
+               8 Verzeichnis(se), 937.657.905.152 Bytes frei
+
+C:\devhost\ZendSkeletonApplication>php -S 0.0.0.0:8080 -t public public/index.php
+Cannot load Xdebug - extension already loaded
+PHP 5.6.21 Development Server started at Tue Jan 16 09:19:02 2018
+Listening on http://0.0.0.0:8080
+Document root is C:\devhost\ZendSkeletonApplication\public
+Press Ctrl-C to quit.
+[Tue Jan 16 09:19:36 2018] 127.0.0.1:59180 [200]: /css/bootstrap.min.css
+[Tue Jan 16 09:19:37 2018] 127.0.0.1:59181 [200]: /css/bootstrap-theme.min.css
+[Tue Jan 16 09:19:37 2018] 127.0.0.1:59182 [200]: /css/style.css
+[Tue Jan 16 09:19:37 2018] 127.0.0.1:59184 [200]: /js/jquery-3.1.0.min.js
+[Tue Jan 16 09:19:37 2018] 127.0.0.1:59185 [200]: /js/bootstrap.min.js
+[Tue Jan 16 09:19:38 2018] 127.0.0.1:59186 [200]: /img/favicon.ico
+[Tue Jan 16 09:19:38 2018] 127.0.0.1:59192 [200]: /img/zf-logo-mark.svg
+
+C:\devhost\ZendSkeletonApplication>composer development-enable
+Cannot load Xdebug - extension already loaded
+> zf-development-mode enable
+Cannot load Xdebug - extension already loaded
+Already in development mode!
+
+C:\devhost\ZendSkeletonApplication>composer development-status
+Cannot load Xdebug - extension already loaded
+> zf-development-mode status
+Cannot load Xdebug - extension already loaded
+Development mode is ENABLED
+
+C:\devhost\ZendSkeletonApplication>dir
+ Datenträger in Laufwerk C: ist OSDisk
+ Volumeseriennummer: E69F-29DD
+
+ Verzeichnis von C:\devhost\ZendSkeletonApplication
+
+16.01.2018  09:14    <DIR>          .
+16.01.2018  09:14    <DIR>          ..
+16.01.2018  09:11               100 .gitignore
+16.01.2018  09:16             1.282 composer.json
+16.01.2018  09:16            37.920 composer.lock
+16.01.2018  09:11             2.421 CONDUCT.md
+16.01.2018  10:16    <DIR>          config
+16.01.2018  09:11             7.098 CONTRIBUTING.md
+16.01.2018  09:11    <DIR>          data
+16.01.2018  09:11                98 docker-compose.yml
+16.01.2018  09:11               410 Dockerfile
+16.01.2018  09:11             1.545 LICENSE.md
+16.01.2018  09:11    <DIR>          module
+16.01.2018  09:11             1.029 phpcs.xml
+16.01.2018  09:11               261 phpunit.xml.dist
+16.01.2018  09:11    <DIR>          public
+16.01.2018  09:11             6.749 README.md
+16.01.2018  09:11               516 TODO.md
+16.01.2018  09:11             1.884 Vagrantfile
+16.01.2018  09:15    <DIR>          vendor
+              13 Datei(en),         61.313 Bytes
+               7 Verzeichnis(se), 937.660.633.088 Bytes frei
+
+C:\devhost\ZendSkeletonApplication>cd module
+
+C:\devhost\ZendSkeletonApplication\module>mkdir Album
+
+C:\devhost\ZendSkeletonApplication\module>cd Album
+
+C:\devhost\ZendSkeletonApplication\module\Album>mkdir config src view\album\album
+
+C:\devhost\ZendSkeletonApplication\module\Album>cd src
+
+C:\devhost\ZendSkeletonApplication\module\Album\src>mkdir Controller Form Model
+
+C:\devhost\ZendSkeletonApplication\module\Album\src>cd..
+
+C:\devhost\ZendSkeletonApplication\module\Album>cd..
+
+C:\devhost\ZendSkeletonApplication\module>tree Album
+Auflistung der Ordnerpfade für Volume OSDisk
+Volumeseriennummer : E69F-29DD
+C:\DEVHOST\ZENDSKELETONAPPLICATION\MODULE\ALBUM
+├───config
+├───src
+│   ├───Controller
+│   ├───Form
+│   └───Model
+└───view
+    └───album
+        └───album
+
+C:\devhost\ZendSkeletonApplication\module>cd..
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+Cannot load Xdebug - extension already loaded
+
+
+  [Seld\JsonLint\ParsingException]
+  "./composer.json" does not contain valid JSON
+  Parse error on line 22:
+  ...plication/src/",                   Album"Album\\": "mod
+  ---------------------^
+  Expected: 'STRING' - It appears you have an extra trailing comma
+
+
+
+C:\devhost\ZendSkeletonApplication>cd module
+
+C:\devhost\ZendSkeletonApplication\module>cd ..
+
+C:\devhost\ZendSkeletonApplication>composer dump-autoload
+Cannot load Xdebug - extension already loaded
+
+
+  [Seld\JsonLint\ParsingException]
+  "./composer.json" does not contain valid JSON
+  Parse error on line 22:
+  ...plication/src/",                   Album"Album\\": "mod
+  ---------------------^
+  Expected: 'STRING' - It appears you have an extra trailing comma
+
+
+
+C:\devhost\ZendSkeletonApplication>cd module
+
+C:\devhost\ZendSkeletonApplication\module> composer dump-autoload
+Cannot load Xdebug - extension already loaded
+No composer.json in current directory, do you want to use the one at C:\devhost\ZendSkeletonApplication? [Y,n]? n^CBatchvorgang abbrechen (J/N)? ^Cn
+
+C:\devhost\ZendSkeletonApplication\module>cd..
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+Cannot load Xdebug - extension already loaded
+
+
+  [Seld\JsonLint\ParsingException]
+  "./composer.json" does not contain valid JSON
+  Parse error on line 22:
+  ...plication/src/",                   Album"Album\\": "mod
+  ---------------------^
+  Expected: 'STRING' - It appears you have an extra trailing comma
+
+
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+Cannot load Xdebug - extension already loaded
+
+
+  [Seld\JsonLint\ParsingException]
+  "./composer.json" does not contain valid JSON
+  Parse error on line 22:
+  ...plication/src/",                   Album"Album\\": "mod
+  ---------------------^
+  Expected: 'STRING' - It appears you have an extra trailing comma
+
+
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+Cannot load Xdebug - extension already loaded
+
+
+  [Seld\JsonLint\ParsingException]
+  "./composer.json" does not contain valid JSON
+  Parse error on line 22:
+  ...plication/src/",                   Album"Album\\": "mod
+  ---------------------^
+  Expected: 'STRING' - It appears you have an extra trailing comma
+
+
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+Cannot load Xdebug - extension already loaded
+Generating autoload files
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+PHP Deprecated:  Comments starting with '#' are deprecated in C:\xampp\php\php.ini on line 2039 in Unknown on line 0
+PHP Deprecated:  Comments starting with '#' are deprecated in C:\Users\1015001\AppData\Local\Temp\3602.tmp on line 2039 in Unknown on line 0
+Generating autoload files
+
+C:\devhost\ZendSkeletonApplication> composer dump-autoload
+Generating autoload files
+
+C:\devhost\ZendSkeletonApplication>composer require Zend\
+
+
+  [InvalidArgumentException]
+  Could not find a matching version of package Zend\. Check the package spelling, your version constraint and that the package is available in a stability which matches your minimum-stability (dev).
+
+
+require [--dev] [--prefer-source] [--prefer-dist] [--no-progress] [--no-suggest] [--no-update] [--no-scripts] [--update-no-dev] [--update-with-dependencies] [--update-with-all-dependencies] [--ignore-platform-reqs] [--prefer-stable] [--prefer-lowest] [--sort-packages] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--] [<packages>]...
+
+
+C:\devhost\ZendSkeletonApplication>
+C:\devhost\ZendSkeletonApplication>
+C:\devhost\ZendSkeletonApplication>
+C:\devhost\ZendSkeletonApplication>
+C:\devhost\ZendSkeletonApplication>composer require zendframework/zend-db
+Using version ^2.9 for zendframework/zend-db
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing zendframework/zend-db (2.9.2): Downloading (100%)
+
+  Please select which config file you wish to inject 'Zend\Db' into:
+  [0] Do not inject
+  [1] config/modules.config.php
+  [2] config/development.config.php.dist
+  Make your selection (default is 0):1
+
+  Remember this option for other packages of the same type? (y/N)y
+Installing Zend\Db from package zendframework/zend-db
+zendframework/zend-db suggests installing zendframework/zend-hydrator (Zend\Hydrator component for using HydratingResultSets)
+Writing lock file
+Generating autoload files
+
+C:\devhost\ZendSkeletonApplication>composer require zendframework/zend-form
+Using version ^2.11 for zendframework/zend-form
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Conclusion: don't install zendframework/zend-form 2.11.0
+    - Conclusion: don't install zendframework/zend-form 2.12.x-dev
+    - Conclusion: remove zendframework/zend-validator 2.8.2
+    - Installation request for zendframework/zend-form ^2.11 -> satisfiable by zendframework/zend-form[2.11.0, 2.12.x-dev, 2.11.x-dev].
+    - Conclusion: don't install zendframework/zend-validator 2.8.2
+    - zendframework/zend-form 2.11.x-dev requires zendframework/zend-inputfilter ^2.8 -> satisfiable by zendframework/zend-inputfilter[2.8.0, 2.9.x-dev, 2.8.x-dev].
+    - zendframework/zend-inputfilter 2.8.0 requires zendframework/zend-validator ^2.10.1 -> satisfiable by zendframework/zend-validator[2.10.1, 2.11.x-dev, 2.10.x-dev].
+    - zendframework/zend-inputfilter 2.9.x-dev requires zendframework/zend-validator ^2.10.1 -> satisfiable by zendframework/zend-validator[2.10.1, 2.11.x-dev, 2.10.x-dev].
+    - zendframework/zend-inputfilter 2.8.x-dev requires zendframework/zend-validator ^2.10.1 -> satisfiable by zendframework/zend-validator[2.10.1, 2.11.x-dev, 2.10.x-dev].
+    - Can only install one of: zendframework/zend-validator[2.10.1, 2.8.2].
+    - Can only install one of: zendframework/zend-validator[2.11.x-dev, 2.8.2].
+    - Can only install one of: zendframework/zend-validator[2.10.x-dev, 2.8.2].
+    - Installation request for zendframework/zend-validator (locked at 2.8.2) -> satisfiable by zendframework/zend-validator[2.8.2].
+
+
+Installation failed, reverting ./composer.json to its original content.
+
+C:\devhost\ZendSkeletonApplication>composer require zendframework/zend-mvc-form
+Using version ^1.0 for zendframework/zend-mvc-form
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 7 installs, 0 updates, 0 removals
+  - Installing zendframework/zend-i18n (2.7.4): Loading from cache
+
+  Please select which config file you wish to inject 'Zend\I18n' into:
+  [0] Do not inject
+  [1] config/modules.config.php
+  [2] config/development.config.php.dist
+  Make your selection (default is 0):1
+
+  Remember this option for other packages of the same type? (y/N)y
+Installing Zend\I18n from package zendframework/zend-i18n
+  - Installing zendframework/zend-filter (2.7.2): Loading from cache
+Installing Zend\Filter from package zendframework/zend-filter
+  - Installing zendframework/zend-hydrator (2.3.1): Loading from cache
+Installing Zend\Hydrator from package zendframework/zend-hydrator
+  - Installing zendframework/zend-inputfilter (2.7.6): Loading from cache
+Installing Zend\InputFilter from package zendframework/zend-inputfilter
+  - Installing zendframework/zend-form (2.10.2): Loading from cache
+Installing Zend\Form from package zendframework/zend-form
+  - Installing zendframework/zend-code (3.1.0): Loading from cache
+zendframework/zend-i18n suggests installing ext-intl (Required for most features of Zend\I18n; included in default builds of PHP)
+zendframework/zend-i18n suggests installing zendframework/zend-cache (Zend\Cache component)
+zendframework/zend-i18n suggests installing zendframework/zend-i18n-resources (Translation resources)
+zendframework/zend-filter suggests installing zendframework/zend-crypt (Zend\Crypt component, for encryption filters)
+zendframework/zend-hydrator suggests installing zendframework/zend-serializer (^2.6.1, to use the SerializableStrategy)
+zendframework/zend-form suggests installing zendframework/zend-captcha (^2.7.1, required for using CAPTCHA form elements)
+zendframework/zend-form suggests installing zendframework/zendservice-recaptcha (in order to use the ReCaptcha form element)
+zendframework/zend-code suggests installing doctrine/annotations (Doctrine\Common\Annotations >=1.0 for annotation features)
+Writing lock file
+Generating autoload files
+
+C:\devhost\ZendSkeletonApplication>CREATE TABLE album (id INTEGER PRIMARY KEY AUTOINCREMENT, artist varchar(100) NOT NULL, title varchar(100) NOT NULL);
+Der Befehl "CREATE" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\devhost\ZendSkeletonApplication>INSERT INTO album (artist, title) VALUES ('The Military Wives', 'In My Dreams');
+Der Befehl "INSERT" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\devhost\ZendSkeletonApplication>INSERT INTO album (artist, title) VALUES ('Adele', '21');
+Der Befehl "INSERT" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\devhost\ZendSkeletonApplication>INSERT INTO album (artist, title) VALUES ('Bruce Springsteen', 'Wrecking Ball (Deluxe)');
+Der Befehl "INSERT" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\devhost\ZendSkeletonApplication>INSERT INTO album (artist, title) VALUES ('Lana Del Rey', 'Born To Die');
+Der Befehl "INSERT" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\devhost\ZendSkeletonApplication>sqlite3 data/zftutorial.db < data/schema.sql
+Zugriff verweigert
+
+C:\devhost\ZendSkeletonApplication>sqlite data/zftutorial.db < data/schema.sql
+Zugriff verweigert
+
+C:\devhost\ZendSkeletonApplication>

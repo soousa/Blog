@@ -1,0 +1,49 @@
+<?php
+namespace Galerie\Form;
+
+use Zend\Form\Form;
+
+class GalerieForm extends Form
+{
+    public function __construct($name = null)
+    {
+        // We will ignore the name provided to the constructor
+        parent::__construct('galerie');
+
+        $this->add([
+            'name' => 'id',
+            'type' => 'hidden',
+        ]);
+        $this->add([
+            'name' => 'title',
+            'type' => 'text',
+            'options' => [
+                'label' => 'Title',
+            ],
+        ]);
+		 $this->add([
+            'name' => 'autor',
+            'type' => 'text',
+            'options' => [
+                'label' => 'Autor',
+            ],
+        ]);
+       
+		$this->add([
+            'name' => 'land',
+            'type' => 'text',
+            'options' => [
+                'label' => 'Land',
+            ],
+        ]);
+        $this->add([
+            'name' => 'submit',
+            'type' => 'submit',
+            'attributes' => [
+                'value' => 'Go',
+                'id'    => 'submitbutton',
+            ],
+        ]);
+    }
+}
+?>

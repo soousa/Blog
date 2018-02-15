@@ -1,0 +1,1 @@
+INSERT INTO galerie (name, path, type) VALUES ('Man in a horse','img/photo/carphoto.jpeg','img-1'),('Carl Lewis','img/photo/images1.png','img-2'),('The President Zero','img/photo/images2.png','img3'),('Windows in your Hands','img/photo/images3.png','img4');
